@@ -1,0 +1,76 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+      <style>
+        body, html {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          height: 100%;
+        }
+        * {
+          box-sizing: border-box;
+        }
+        .row {
+          display: flex;
+          flex-wrap: nowrap;
+          height: 100%;
+        }
+        .side {
+          flex: 30%; /* Set the width of the sidebar */
+          background-color: #f1f1f1; /* Grey background color */
+          padding: 20px; /* Some padding */
+          height: 100%;
+          font-size: 40px;
+        }
+        .main {
+          flex: 70%; /* Set the width of the main content */
+          background-color: white; /* White background color */
+          padding: 20px; /* Some padding */
+        }
+        .navbar {
+          background-color: #333;
+          overflow: hidden;
+        }
+        .navbar a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        .navbar a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">Bellagio</a>
+        <a href="#contact">Strat</a>
+        <a href="#about">Freemont</a>
+        <a href="#about">About</a>
+        <a href="#about">Contact us</a>
+      </div>
+      <div class="body">
+        <div class="row">
+          <div class="side">Welcome to Las Vegas guide!</div>
+          <div class="side">
+            {% load static %}
+
+            <img src="{% static 'composeexample/las-vegas-strip_2.jpg' %}" alt=" lasvegasstrip">
+          
+          </div>
+          <div class="main">...</div>
+        </div>
+      </div>
+ 
+    </body>
+</html>
